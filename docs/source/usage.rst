@@ -32,6 +32,24 @@ For example:
 >>> lumache.get_random_ingredients()
 ['shells', 'gorgonzola', 'parsley']
 
++--------------------------------------------------------------------+--------------------+
+| **Checklist**                                                      | **link**           |
++--------------------------------------------------------------------+--------------------+
+| | ENA prokaryotic pathogen minimal sample checklist                | ERC000028          |
++--------------------------------------------------------------------+--------------------+
+| ENA Global Microbial Identifier reporting standard checklist GMI_MDM:1.1          | ERC000029          |
++---------------------------------+----------------------------------+--------------------+
+| | ENA Influenza virus reporting standard checklist                 | ERC000032          |
++---------------------------------+----------------------------------+--------------------+
+| | ENA virus pathogen reporting standard checklist                  | ERC000033          |
++---------------------------------+----------------------------------+--------------------+
+| ENA parasite sample checklist                                      | ERC000039          |
++---------------------------------+----------------------------------+--------------------+
+| ENA Global Microbial Identifier Proficiency Test (GMI PT) checklist             | ERC000041          |
++---------------------------------+----------------------------------+--------------------+
+
+
+
 Tweetorial
 
 .. raw:: html
