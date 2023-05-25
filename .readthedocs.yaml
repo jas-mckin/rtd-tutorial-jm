@@ -1,6 +1,3 @@
 version: 2
 
-formats:
-  - pdf
-  - epub
-  - htmlzip
+formats: all
