@@ -30,7 +30,7 @@ Contents
    :caption: Pathogen docs
    :maxdepth: 2
    
-   Pathogen_guide
+   pathogen_guide
    other_guides
    
 
