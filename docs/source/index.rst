@@ -1,5 +1,7 @@
-Welcome to Lumache's documentation!
-===================================
+Welcome to the ENA Pathogens Documentation
+==========================================
+
+
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
 that creates recipes mixing random ingredients.
@@ -23,13 +25,14 @@ Contents
    usage
    api
    
-
-Help and Guides
----------------
-
+   
 .. toctree::
+   :caption: Pathogen docs
+   :maxdepth: 2
+   
+   Pathogen_guide
+   other_guides
+   
 
-   Pathogen submissions general guide
-   SARS-CoV-2 general guide
    
     
