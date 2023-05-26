@@ -32,7 +32,7 @@ Pathogen docs
 .. toctree::
    :maxdepth: 2
    
-   pathogen_guide
+   pathogen_subs_guide
    
 
    
