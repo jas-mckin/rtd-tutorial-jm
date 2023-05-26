@@ -26,12 +26,13 @@ Contents
    api
    
    
+Pathogen docs
+--------
+   
 .. toctree::
-   :caption: Pathogen docs
    :maxdepth: 2
    
    pathogen_guide
-   other_guides
    
 
    
