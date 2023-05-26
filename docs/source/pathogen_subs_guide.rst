@@ -1,7 +1,7 @@
 General Pathogen Submissions Guide
 ===================
 
-.. image:: images/ENA_logo_tabline.png
+.. image:: images/ENA_logo_tagline.png
    :align: center
 
 Introduction
