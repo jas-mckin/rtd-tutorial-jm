@@ -33,3 +33,12 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# - add logo to top of site
+html_theme = 'sphinx_rtd_theme'
+html_static_path = ['_static']
+html_logo = 'images/ENA_Logo_tagline.png'
+html_theme_options = {
+    'logo_only': True,
+    'display_version': False,
+}
