@@ -23,10 +23,13 @@ Contents
    usage
    api
    
-Contents
---------
+
+Help and Guides
+---------------
 
 .. toctree::
 
-   usage
-   api 
+   Pathogen submissions general guide
+   SARS-CoV-2 general guide
+   
+    
