@@ -32,7 +32,7 @@ us at ena-path-collabs@ebi.ac.uk.
 
 .. contents::
    :local:
-   :depth: 10
+   :depth: 3
 
 
 Getting Started
@@ -152,74 +152,41 @@ The pathogen specific checklists are provided below.
 Sample Taxonomy
 '''''''''''''''''
 
-Sample host field
-''''''''''''''''''
-subheading 1
-````````
+Our `Tips for Sample Taxonomy <https://ena-docs.readthedocs.io/en/latest/faq/taxonomy.html>`_ page provides a helpful guide for choosing
+the right taxonomy for your pathogen submission.
 
-subheading 2
-........
-
-subheading 3
-***********
-
-subheading 4
-+++++++
-
-subheading 5
-^^^^^^^^^
-
-
-Submit raw read data
-~~~~~~
-
-add information here
-
-Submit sequence or assembly data
-~~~~~~
-
-
-submit targeted sequences
-``````````````
-
-submit pathogen assemblies
-``````````````
-
-Viral assembly submission
-'''''''''''''''''
-``webin-cli command here``
-
-
-
-
-bacterial assembly submission
-'''''''''''''''''
-``webin-cli command here``
+You can search for suitable taxon IDs and find more information about a taxon ID using the taxonomy API endpoints:
 
 ::
 
-   version: 2
-
-   python:
-     install:
-       - requirements: docs/requirements.txt
-       - method: pip
-         path: .
-         extra_requirements:
-           - docs
-       - method: pip
-         path: another/package
-     system_packages: true
+  `https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/ <https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/>`_
+  `https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/ <https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/>`_
+  `https://www.ebi.ac.uk/ena/taxonomy/rest/any-name/ <https://www.ebi.ac.uk/ena/taxonomy/rest/any-name/>`_
+  `https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/ <https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/>`_
 
 
 
-eukaryotic assembly submission
-'''''''''''''''''
+Sample host field
+''''''''''''''''''
 
-``webin-cli command here``
+The pathogen sample host fields are varied. Here is listed the host fields currently in use and some guidance for filling these.
 
+Host fields grab-able from API:
 
+:host: natural (as opposed to laboratory) host to the organism from which sample was obtained
+:host_body_site: name of body site from where the sample was obtained
+:host_genotype: genotype of host
+:host_gravidity: whether or not subject is gravid, including date due or date post-conception where applicable
+:host_growth_conditions: literature reference giving growth conditions of the host
+:host_phenotype: phenotype of host
+:host_sex: physical sex of the host
+:host_status: condition of host (eg. diseased or healthy)
+:host_tax_id: NCBI taxon id of the host
+:submitted_host_sex: physical sex of the host
 
+Host fields found when downloading checklists
 
-heading 3
-~~~~~~~~~
+:host health state: health status of the host at the time of sample collection
+:host scientific name: the scientific name of the host
+:lab_host: scientific name of the laboratory host used to propagate the source organism from which the sample was obtained **lab_host is not in the API**
+
