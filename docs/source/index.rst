@@ -22,3 +22,11 @@ Contents
 
    usage
    api
+   
+Contents
+--------
+
+.. toctree::
+
+   usage
+   api 
