@@ -144,6 +144,8 @@ Pathogen host field guidance
 Submit raw read data
 ~~~~~~
 
+add information here
+
 Submit sequence or assembly data
 ~~~~~~
 
@@ -162,6 +164,8 @@ bacterial assembly submission
 
 eukaryotic assembly submission
 '''''''''''''''''
+
+
 
 heading 3
 ~~~~~~
