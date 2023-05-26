@@ -151,19 +151,19 @@ Sample Taxonomy
 
 Sample host field
 ''''''''''''''''''
-subheading
+subheading 1
 ````````
 
-subheading
+subheading 2
 ........
 
-subheading
+subheading 3
 ***********
 
-subheading
+subheading 4
 +++++++
 
-subheading
+subheading 5
 ^^^^^^^^^
 
 
@@ -193,7 +193,7 @@ bacterial assembly submission
 '''''''''''''''''
 ``webin-cli command here``
 
-.. code-block:: yaml
+::
 
    version: 2
 
