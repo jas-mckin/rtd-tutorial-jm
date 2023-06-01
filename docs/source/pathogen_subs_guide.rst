@@ -271,4 +271,4 @@ Assembly submission examples
          MOLECULETYPE   viral cRNA
          FASTA   genome.fasta.gz
 
-
+      
