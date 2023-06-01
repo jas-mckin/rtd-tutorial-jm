@@ -1,10 +1,9 @@
 # Configuration file for the Sphinx documentation builder.
+# Required
 
-# -- Project information
+python:
+   pip_install: true
 
-project = 'rtd-tutoiral-jm'
-copyright = '2021, Graziella'
-author = 'Graziella'
 
 release = '0.1'
 version = '0.1.0'
@@ -43,13 +42,10 @@ epub_show_urls = 'footnote'
 #    'display_version': False,
 #}
 
+# -- Project information
+project = 'rtd-tutoiral-jm'
+copyright = '2021, Jasmine M'
+author = 'Jasmine M'
+
 # makes tabs possible
-version: 2
-
-python:
-  install:
-    - requirements: docs/requirements.txt
-    - requirements: requirements.txt
-
-
 extensions = ['sphinx_tabs.tabs']
