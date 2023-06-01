@@ -59,14 +59,4 @@ Tweetorial
     </embed>
 
 
-test making own tabs
 
-.. tabs::
-
-   .. tab:: Apples
-
-      Apples are red.
-
-   .. tab:: Pears
-
-      Pears are green.
