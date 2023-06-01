@@ -1,8 +1,4 @@
 # Configuration file for the Sphinx documentation builder.
-# Required
-
-python:
-   pip_install: true
 
 
 release = '0.1'
