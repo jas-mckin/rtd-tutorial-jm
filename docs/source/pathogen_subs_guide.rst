@@ -26,7 +26,7 @@ test tabs below
 
 
 Introduction
------------
+------------
 
 This guide provides general information and help for submitting pathogen sequence data to the `European Nucleotide Archive <https://www.ebi.ac.uk/ena/browser/home>`_
 (ENA). All public `INSDC <https://www.insdc.org/>`_ pathogen data will be made available to browse using the Pathogens Portal.
@@ -224,7 +224,7 @@ Submit Assembly data
 Preface about assembly submission
 
 Assembly submission examples
-``````````````
+--------------------
 
 spacer text
 
