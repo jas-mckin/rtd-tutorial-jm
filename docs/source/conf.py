@@ -42,3 +42,6 @@ epub_show_urls = 'footnote'
 #    'logo_only': True,
 #    'display_version': False,
 #}
+
+# makes tabs possible
+extensions = ['sphinx_tabs.tabs']
