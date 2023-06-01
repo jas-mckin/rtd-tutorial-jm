@@ -13,8 +13,8 @@ General Pathogen Submissions Guide
 Introduction
 ------------
 
-This guide provides general information and help for submitting pathogen sequence data to the `European Nucleotide Archive <https://www.ebi.ac.uk/ena/browser/home>`_
-(ENA). All public `INSDC <https://www.insdc.org/>`_ pathogen data will be made available to browse using the Pathogens Portal.
+This guide provides general information and help for submitting pathogen sequence data to the `European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_
+. All public `INSDC <https://www.insdc.org/>`_ pathogen data will be made available to browse using the Pathogens Portal.
 
 Please see below for a specific guide for submitting pathogen related data. The guide frequently refers to the
 `ENA Training Modules <https://ena-docs.readthedocs.io/en/latest/index.html>`_,
@@ -206,14 +206,18 @@ Sample host field
 Submit Assembly data
 ~~~~~~
 
+Webin-CLI command
+
+.. code:: shell
+
+java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+
 
 .. tabs::
 
-   .. tab:: Viridae
+   .. tab:: Viruses
 
-      .. code:: shell
-
-         java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+      manifest file example
 
       .. code:: none
 
@@ -228,11 +232,25 @@ Submit Assembly data
          MOLECULETYPE   viral cRNA
          FASTA   genome.fasta.gz
 
-   .. tab:: Bacteriae
+      chromosome list file examples
 
-      .. code:: shell
+      .. code:: none
 
-         java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+         chr01   1 Monopartite
+
+         chr01   1 Monopartite viroid (viral cRNA)
+
+         chr01   1 Monopartite virion
+
+         chr01   1 Monopartite phage
+
+         chr01   1 Linear-Monopartite
+
+         chr01   1 circular-Multipartite
+
+   .. tab:: Bacteria
+
+      manifest file example
 
       .. code:: none
 
@@ -244,15 +262,28 @@ Submit Assembly data
          PROGRAM   TODO
          PLATFORM   TODO
          MINGAPLENGTH   TODO
-         MOLECULETYPE   viral cRNA
+         MOLECULETYPE   genomic DNA
          FASTA   genome.fasta.gz
 
+      chromosome list file examples
 
-   .. tab:: eukaryota
+      .. code:: none
 
-      .. code:: shell
+         chr01   1 Monopartite
 
-         java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+         chr01   1 Monopartite viroid (viral cRNA)
+
+         chr01   1 Monopartite virion
+
+         chr01   1 Monopartite phage
+
+         chr01   1 Linear-Monopartite
+
+         chr01   1 circular-Multipartite
+
+   .. tab:: Eukaryota
+
+      manifest file example
 
       .. code:: none
 
@@ -264,7 +295,24 @@ Submit Assembly data
          PROGRAM   TODO
          PLATFORM   TODO
          MINGAPLENGTH   TODO
-         MOLECULETYPE   viral cRNA
+         MOLECULETYPE   genomic DNA
          FASTA   genome.fasta.gz
+
+      chromosome list file examples
+
+      .. code:: none
+
+         chr01   1 Monopartite
+
+         chr01   1 Monopartite viroid (viral cRNA)
+
+         chr01   1 Monopartite virion
+
+         chr01   1 Monopartite phage
+
+         chr01   1 Linear-Monopartite
+
+         chr01   1 circular-Multipartite
+
 
 
