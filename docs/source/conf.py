@@ -44,4 +44,12 @@ epub_show_urls = 'footnote'
 #}
 
 # makes tabs possible
+version: 2
+
+python:
+  install:
+    - requirements: docs/requirements.txt
+    - requirements: requirements.txt
+
+
 extensions = ['sphinx_tabs.tabs']
