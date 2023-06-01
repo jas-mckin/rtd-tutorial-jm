@@ -190,3 +190,87 @@ Host fields found when downloading checklists
 :host scientific name: the scientific name of the host
 :lab_host: scientific name of the laboratory host used to propagate the source organism from which the sample was obtained **lab_host is not in the API**
 
+Submit Run Data
+~~~~~~
+
+Register Study
+``````````````
+
+Sample host field
+''''''''''''''''''
+
+Submit Assembly data
+~~~~~~
+
+Preface about assembly submission
+
+Assembly submission examples
+``````````````
+
+.. tabs::
+
+   .. tab:: virus
+
+      webin-cli command:
+      .. code:: shell
+
+         java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+
+       manifest file:
+      .. code:: none
+
+         STUDY   TODO
+         SAMPLE   TODO
+         ASSEMBLYNAME   TODO
+         ASSEMBLY_TYPE clone or isolate
+         COVERAGE   TODO
+         PROGRAM   TODO
+         PLATFORM   TODO
+         MINGAPLENGTH   TODO
+         MOLECULETYPE   viral cRNA
+         FASTA   genome.fasta.gz
+
+   .. tab:: bacteria
+
+      webin-cli command:
+      .. code:: shell
+
+         java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+
+       manifest file:
+      .. code:: none
+
+         STUDY   TODO
+         SAMPLE   TODO
+         ASSEMBLYNAME   TODO
+         ASSEMBLY_TYPE clone or isolate
+         COVERAGE   TODO
+         PROGRAM   TODO
+         PLATFORM   TODO
+         MINGAPLENGTH   TODO
+         MOLECULETYPE   viral cRNA
+         FASTA   genome.fasta.gz
+
+
+   .. tab:: eukaryotic
+
+      webin-cli command:
+      .. code:: shell
+
+         java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+
+       manifest file:
+      .. code:: none
+
+         STUDY   TODO
+         SAMPLE   TODO
+         ASSEMBLYNAME   TODO
+         ASSEMBLY_TYPE clone or isolate
+         COVERAGE   TODO
+         PROGRAM   TODO
+         PLATFORM   TODO
+         MINGAPLENGTH   TODO
+         MOLECULETYPE   viral cRNA
+         FASTA   genome.fasta.gz
+
+
