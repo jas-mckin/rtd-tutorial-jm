@@ -226,9 +226,11 @@ Preface about assembly submission
 Assembly submission examples
 ``````````````
 
+spacer text
+
 .. tabs::
 
-   .. tab:: virus
+   .. tab:: Viridae
 
       .. code:: shell
 
@@ -247,7 +249,7 @@ Assembly submission examples
          MOLECULETYPE   viral cRNA
          FASTA   genome.fasta.gz
 
-   .. tab:: bacteria
+   .. tab:: Bacteriae
 
       .. code:: shell
 
@@ -267,7 +269,7 @@ Assembly submission examples
          FASTA   genome.fasta.gz
 
 
-   .. tab:: eukaryotic
+   .. tab:: eukaryota
 
       .. code:: shell
 
