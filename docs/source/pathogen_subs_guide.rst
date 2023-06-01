@@ -208,7 +208,7 @@ Webin-CLI command
 
 .. code:: shell
 
-java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+   java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
 
 manifest file examples
 
