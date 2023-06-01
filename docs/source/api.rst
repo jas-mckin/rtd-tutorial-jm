@@ -8,62 +8,66 @@ API
 
 
 
+
+
+
 .. tabs::
 
-   .. tab:: Viridae
+   .. tab:: Sphinx
 
-      .. code:: shell
+      .. code:: yaml
 
-         java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+         # .readthedocs.yaml
+         # Read the Docs configuration file
+         # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
-      .. code:: none
+         # Required
+         version: 2
 
-         STUDY   TODO
-         SAMPLE   TODO
-         ASSEMBLYNAME   TODO
-         ASSEMBLY_TYPE clone or isolate
-         COVERAGE   TODO
-         PROGRAM   TODO
-         PLATFORM   TODO
-         MINGAPLENGTH   TODO
-         MOLECULETYPE   viral cRNA
-         FASTA   genome.fasta.gz
+         # Set the version of Python and other tools you might need
+         build:
+           os: ubuntu-22.04
+           tools:
+             python: "3.11"
+             # You can also specify other tool versions:
+             # nodejs: "19"
+             # rust: "1.64"
+             # golang: "1.19"
 
-   .. tab:: Bacteriae
+         # Build documentation in the docs/ directory with Sphinx
+         sphinx:
+            configuration: docs/conf.py
 
-      .. code:: shell
+         # If using Sphinx, optionally build your docs in additional formats such as PDF
+         # formats:
+         #    - pdf
 
-         java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+         # Optionally declare the Python requirements required to build your docs
+         python:
+            install:
+            - requirements: docs/requirements.txt
 
-      .. code:: none
+   .. tab:: MkDocs
 
-         STUDY   TODO
-         SAMPLE   TODO
-         ASSEMBLYNAME   TODO
-         ASSEMBLY_TYPE clone or isolate
-         COVERAGE   TODO
-         PROGRAM   TODO
-         PLATFORM   TODO
-         MINGAPLENGTH   TODO
-         MOLECULETYPE   viral cRNA
-         FASTA   genome.fasta.gz
+      .. code:: yaml
 
+         # .readthedocs.yaml
+         # Read the Docs configuration file
+         # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
-   .. tab:: eukaryota
+         # Required
+         version: 2
 
-      .. code:: shell
+         # Set the version of Python and other tools you might need
+         build:
+           os: ubuntu-22.04
+           tools:
+             python: "3.11"
 
-         java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+         mkdocs:
+           configuration: mkdocs.yml
 
-      .. code:: none
-
-         STUDY   TODO
-         SAMPLE   TODO
-         ASSEMBLYNAME   TODO
-         ASSEMBLY_TYPE clone or isolate
-         COVERAGE   TODO
-         PROGRAM   TODO
-         PLATFORM   TODO
-         MINGAPLENGTH   TODO
-         MOLECULETYPE   viral cRNA
-         FASTA   genome.fasta.gz
+         # Optionally declare the Python requirements required to build your docs
+         python:
+            install:
+            - requirements: docs/requirements.txt
