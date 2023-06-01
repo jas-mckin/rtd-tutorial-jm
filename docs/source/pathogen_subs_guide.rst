@@ -8,21 +8,6 @@ General Pathogen Submissions Guide
  :align: center
 
 
-test tabs below
-
-.. tabs::
-
-   .. tab:: Apples
-
-      Apples are green, or sometimes red.
-
-   .. tab:: Pears
-
-      Pears are green.
-
-   .. tab:: Oranges
-
-      Oranges are orange.
 
 
 Introduction
@@ -221,12 +206,6 @@ Sample host field
 Submit Assembly data
 ~~~~~~
 
-Preface about assembly submission
-
-Assembly submission examples
---------------------
-
-spacer text
 
 .. tabs::
 
@@ -289,18 +268,3 @@ spacer text
          FASTA   genome.fasta.gz
 
 
-test tabs below
-
-.. tabs::
-
-   .. tab:: Apples
-
-      Apples are green, or sometimes red.
-
-   .. tab:: Pears
-
-      Pears are green.
-
-   .. tab:: Oranges
-
-      Oranges are orange.
