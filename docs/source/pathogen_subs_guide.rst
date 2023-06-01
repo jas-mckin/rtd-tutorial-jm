@@ -1,9 +1,13 @@
 General Pathogen Submissions Guide
 ===================
 
-.. image:: images/ENA_Logo_tagline.png
- :width: 400
+
+
+.. image:: images/pathogens_logo_1.png
+ :width: 300
  :align: center
+
+
 
 
 Introduction
@@ -211,12 +215,10 @@ Assembly submission examples
 
    .. tab:: virus
 
-      webin-cli command:
       .. code:: shell
 
          java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
 
-       manifest file:
       .. code:: none
 
          STUDY   TODO
@@ -232,12 +234,10 @@ Assembly submission examples
 
    .. tab:: bacteria
 
-      webin-cli command:
       .. code:: shell
 
          java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
 
-       manifest file:
       .. code:: none
 
          STUDY   TODO
@@ -254,12 +254,10 @@ Assembly submission examples
 
    .. tab:: eukaryotic
 
-      webin-cli command:
       .. code:: shell
 
          java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
 
-       manifest file:
       .. code:: none
 
          STUDY   TODO
