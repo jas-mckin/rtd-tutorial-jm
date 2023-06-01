@@ -1,12 +1,10 @@
-General Pathogen Submissions Guide
-===================
-
-
-
 .. image:: images/pathogens_logo_1.png
- :width: 300
+ :width: 400
  :align: center
 
+
+General Pathogen Submissions Guide
+===================
 
 
 
@@ -212,12 +210,11 @@ Webin-CLI command
 
 java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
 
+manifest file examples
 
 .. tabs::
 
-   .. tab:: Viruses
-
-      manifest file example
+   .. group-tab:: Viruses
 
       .. code:: none
 
@@ -232,25 +229,7 @@ java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context g
          MOLECULETYPE   viral cRNA
          FASTA   genome.fasta.gz
 
-      chromosome list file examples
-
-      .. code:: none
-
-         chr01   1 Monopartite
-
-         chr01   1 Monopartite viroid (viral cRNA)
-
-         chr01   1 Monopartite virion
-
-         chr01   1 Monopartite phage
-
-         chr01   1 Linear-Monopartite
-
-         chr01   1 circular-Multipartite
-
-   .. tab:: Bacteria
-
-      manifest file example
+   .. group-tab:: Bacteria
 
       .. code:: none
 
@@ -265,25 +244,7 @@ java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context g
          MOLECULETYPE   genomic DNA
          FASTA   genome.fasta.gz
 
-      chromosome list file examples
-
-      .. code:: none
-
-         chr01   1 Monopartite
-
-         chr01   1 Monopartite viroid (viral cRNA)
-
-         chr01   1 Monopartite virion
-
-         chr01   1 Monopartite phage
-
-         chr01   1 Linear-Monopartite
-
-         chr01   1 circular-Multipartite
-
-   .. tab:: Eukaryota
-
-      manifest file example
+   .. group-tab:: Eukaryota
 
       .. code:: none
 
@@ -298,7 +259,65 @@ java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context g
          MOLECULETYPE   genomic DNA
          FASTA   genome.fasta.gz
 
-      chromosome list file examples
+chromosome list file examples
+
+.. tabs::
+
+   .. group-tab:: Viruses
+
+      .. code:: none
+
+         chr01   1 Monopartite
+
+      .. code:: none
+
+         chr01   1 Monopartite viroid (viral cRNA)
+
+      .. code:: none
+
+         chr01   1 Monopartite virion
+
+      .. code:: none
+
+         chr01   1 Monopartite phage
+
+      .. code:: none
+
+         chr01   1 Linear-Monopartite
+
+      .. code:: none
+
+         chr01   1 circular-Multipartite
+         chr02   2 circular-Multipartite
+
+   .. group-tab:: Bacteria
+
+      .. code:: none
+
+         chr01   1 Monopartite
+
+      .. code:: none
+
+         chr01   1 Monopartite viroid (viral cRNA)
+
+      .. code:: none
+
+         chr01   1 Monopartite virion
+
+      .. code:: none
+
+         chr01   1 Monopartite phage
+
+      .. code:: none
+
+         chr01   1 Linear-Monopartite
+
+      .. code:: none
+
+         chr01   1 circular-Multipartite
+         chr02   2 circular-Multipartite
+
+   .. group-tab:: Eukaryota
 
       .. code:: none
 
@@ -313,6 +332,5 @@ java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context g
          chr01   1 Linear-Monopartite
 
          chr01   1 circular-Multipartite
-
 
 
