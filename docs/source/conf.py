@@ -45,3 +45,4 @@ author = 'Jasmine M'
 
 # makes tabs possible
 extensions = ['sphinx_tabs.tabs']
+sphinx_tabs_valid_builders = ['linkcheck']
