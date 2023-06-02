@@ -1,14 +1,13 @@
+General Pathogen Submissions Guide
+===================
+
 .. image:: images/pathogens_logo_1.png
  :width: 400
  :align: center
 
 
-General Pathogen Submissions Guide
-===================
-
-
-
 Introduction
+--------
 
 
 This guide provides general information and help for submitting pathogen sequence data to the `European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_
@@ -159,21 +158,20 @@ the right taxonomy for your pathogen submission.
 
 You can search for suitable taxon IDs and find more information about a taxon ID using the taxonomy API endpoints:
 
-::
+.. code:: none
 
-  `https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/ <https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/>`_
-  `https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/ <https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/>`_
-  `https://www.ebi.ac.uk/ena/taxonomy/rest/any-name/ <https://www.ebi.ac.uk/ena/taxonomy/rest/any-name/>`_
-  `https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/ <https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/>`_
+   https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/
+   https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/
+   https://www.ebi.ac.uk/ena/taxonomy/rest/any-name/
+   https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/
 
+The `ENA taxonomy API <https://www.ebi.ac.uk/ena/taxonomy/rest/>`_ interface may also be used.
 
-
-Sample host field tips
+Sample host fields guidance
 ''''''''''''''''''
 
-The pathogen sample host fields are varied. Here is listed the host fields currently in use and some guidance for filling these.
+Every pathogen checklist includes host fields. Here is provided some guidance on filling the host fields.
 
-Host fields grab-able from API:
 
 :host: natural (as opposed to laboratory) host to the organism from which sample was obtained
 :host_body_site: name of body site from where the sample was obtained
