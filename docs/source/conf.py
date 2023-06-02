@@ -1,10 +1,5 @@
 # Configuration file for the Sphinx documentation builder.
 
-# -- Project information
-
-project = 'rtd-tutoiral-jm'
-copyright = '2021, Graziella'
-author = 'Graziella'
 
 release = '0.1'
 version = '0.1.0'
@@ -42,3 +37,12 @@ epub_show_urls = 'footnote'
 #    'logo_only': True,
 #    'display_version': False,
 #}
+
+# -- Project information
+project = 'ena-pathogen-docs'
+copyright = '2023, European Nucleotide Archive (ENA), Licensed under the Apache License 2.0'
+author = 'European Nucleotide Archive (ENA)'
+
+# makes tabs possible
+extensions = ['sphinx_tabs.tabs']
+sphinx_tabs_valid_builders = ['linkcheck']
