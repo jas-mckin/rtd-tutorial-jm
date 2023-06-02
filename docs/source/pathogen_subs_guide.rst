@@ -205,7 +205,7 @@ The instructions here provide specific details about submitting microbial pathog
 Webin-CLI (command line interface) needs to be used. The guide for downloading and using Webin-CLI is `here <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html#webin-cli-submission>`_.
 
 .. note::
-   For submission of isolated pathogen sequences, please refer to the `targeted sequence submissions guide <https://ena-docs.readthedocs.io/en/latest/submit/sequence.html#how-to-submit-targeted-sequences> `_.
+   For submission of isolated pathogen sequences, please refer to the `targeted sequence submissions guide <https://ena-docs.readthedocs.io/en/latest/submit/sequence.html#how-to-submit-targeted-sequences>`_.
 
 When you have prepared your assembly and it is ready for submission, you can test the submission using the Webin-CLI ``-validate`` flag.
 When you are ready to submit the assembly, you can use the ``-submit`` flag.
@@ -215,6 +215,15 @@ When you are ready to submit the assembly, you can use the ``-submit`` flag.
 .. code:: shell
 
    java -jar webin-cli-6.4.0.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+
+Assembly file
+`````````````
+
+Fasta format is accepted for unannotated assemblies, and EMBL flat file format is accepted for annotated assemblies.
+
+The following resources may be helpful for file preparation:
+
+
 
 Manifest file
 `````````````
@@ -284,6 +293,9 @@ the assembly.
 Chromosome here means a range of complete replicons, as explained `here <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_
 and is used when describing a completed assembly.
 
+The chromosome list file is a tab separated file with each row describing each chromosome. The chromosome list file
+guide is `here <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
+
 Examples of **chromosome_list.txt**
 
 .. tabs::
@@ -296,7 +308,7 @@ Examples of **chromosome_list.txt**
 
       .. code:: none
 
-         chr01   1 Monopartite viroid (viral cRNA)
+         chr01   1 Monopartite viroid
 
       .. code:: none
 
