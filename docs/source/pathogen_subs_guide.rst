@@ -195,7 +195,7 @@ the library description. This can be, for example, the name and/or URL to a spec
 
 .. note::
    Submitted reads to ENA should not contain human identifiable reads. Please filter out human reads prior to
-   submission - if required, `here<https://github.com/alakob/Metagen-FastQC-Docker>`_ is a tool which can be used.
+   submission - if required, `here <https://github.com/alakob/Metagen-FastQC-Docker>`_ is a tool which can be used.
 
 
 Submit Assemblies
@@ -331,23 +331,18 @@ Examples of **chromosome_list.txt**
 
       .. code:: none
 
-         chr01   1 Monopartite
-         chr01   1 Monopartite viroid (viral cRNA)
-         chr01   1 Monopartite virion
-         chr01   1 Monopartite phage
-         chr01   1 Linear-Monopartite
-         chr01   1 circular-Multipartite
-         chr02   2 circular-Multipartite
+         chr01   1 circulat-Chromosome
+         chr02   2 circular-Chromosome
+         chrMi   PLAS circular-Chromosome
 
    .. group-tab:: Eukaryota
 
       .. code:: none
 
-         chr01   1 Monopartite
-         chr01   1 Monopartite viroid (viral cRNA)
-         chr01   1 Monopartite virion
-         chr01   1 Monopartite phage
-         chr01   1 Linear-Monopartite
-         chr01   1 circular-Multipartite
+         chr01   1 Linear-Chromosome
+         chr02   2 Linear-Chromosome
+         chr03   3 Linear-Chromosome
+         chr04   4 Linear-Chromosome
+         chrMi   MIT Linear-Chromosome Mitochondrion
 
 
