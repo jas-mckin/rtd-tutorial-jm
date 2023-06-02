@@ -1,17 +1,15 @@
-Welcome to the ENA Pathogens Documentation
+Welcome to the ENA Pathogen Documentation
 ==========================================
 
 
+.. image:: images/pathogens_logo_1.png
+ :width: 400
+ :align: center
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
 
-Lumache has its documentation hosted on Read the Docs.
+Welcome to the ENA pathogen documentation, which provides details for how to use the Pathogen Portal.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+
 
 .. note::
 
@@ -19,18 +17,9 @@ how to :ref:`installation` the project.
 
 Contents
 --------
-
-.. toctree::
-
-   usage
-   api
-   
-   
-Pathogen docs
---------
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    
    pathogen_subs_guide
    

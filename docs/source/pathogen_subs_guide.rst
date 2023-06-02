@@ -168,7 +168,7 @@ You can search for suitable taxon IDs and find more information about a taxon ID
 
 
 
-Sample host field
+Sample host field tips
 ''''''''''''''''''
 
 The pathogen sample host fields are varied. Here is listed the host fields currently in use and some guidance for filling these.
