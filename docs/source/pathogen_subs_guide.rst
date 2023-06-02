@@ -7,7 +7,7 @@ General Pathogen Submissions Guide
 
 
 Introduction
---------
+~~~~~
 
 
 This guide provides general information and help for submitting pathogen sequence data to the `European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_
