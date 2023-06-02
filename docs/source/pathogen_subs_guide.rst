@@ -1,9 +1,10 @@
-General Pathogen Submissions Guide
+General Pathogens Submissions Guide
 ==================================
 
 .. image:: images/pathogens_logo_1.png
  :width: 400
  :align: center
+
 
 
 .. contents::
@@ -15,7 +16,7 @@ Introduction
 
 
 This guide provides general information and help for submitting pathogen sequence data to the `European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_
-. All public `INSDC <https://www.insdc.org/>`_ pathogen data will be made available to browse using the Pathogens Portal.
+. All public `INSDC <https://www.insdc.org/>`_ pathogen data will be made available to browse using the `Pathogens Portal <https://www.ebi.ac.uk/ena/pathogens/v2/>`_.
 
 Please see below for a specific guide for submitting pathogen related data. The guide frequently refers to the
 `ENA Training Modules <https://ena-docs.readthedocs.io/en/latest/index.html>`_,
@@ -128,7 +129,8 @@ Sample checklists
 The following Sample checklists contain  **mandatory**, *recommended* and optional metadata fields (``<SAMPLE_ATTRIBUTE>``),
 with a description for each field, to help with sample metadata completion.
 The checklists were agreed by the Genomic Standards Consortium (GSC). In addition to the core checklist for each life domain,
-the GSC also provides checklist extensions which may have the metadata field you are looking for.
+the GSC also provides checklist `extensions <https://www.gensc.org/pages/standards/extensions.html>`_ which may have the
+metadata field you are looking for.
 
 You can use the `Sample checklists portal <https://www.ebi.ac.uk/ena/browser/checklists>`_ to browse all ENA checklists.
 The pathogen specific checklists are provided below.
@@ -164,22 +166,25 @@ You can search for suitable taxon IDs and find more information about a taxon ID
    https://www.ebi.ac.uk/ena/taxonomy/rest/any-name/
    https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/
 
+The strain of a pathogen may be specified using the taxonomy, it may also be specified using the **strain** field
+in the checklists. If you specify the strain with both, this will make your strain easier to find.
+
 The `ENA taxonomy API <https://www.ebi.ac.uk/ena/taxonomy/rest/>`_ interface may also be used.
+
 
 Sample host
 '''''''''''
 
 Every pathogen checklist includes host attribute fields which can be used to describe the host. Here is provided some guidance on filling the host fields.
 The purpose of the host field is to describe the sample. If you have any questions or concerns about pathogen sample metadata, please
-contact the `helpdesk. <https://www.ebi.ac.uk/ena/browser/support>`_.
+contact the `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
-Pathogen checklist host fields:
+Pathogen checklist mandatory/reccommended host fields:
 
-:host tax_id: NCBI taxon id of the host, e.g. 9606
+:host taxid: NCBI taxon id of the host, e.g. 9606
 :host health state: health status of the host at the time of sample collection
 :host scientific name: Scientific name of the natural (as opposed to laboratory) host to the organism from which sample was obtained.
-:lab_host: scientific name of the laboratory host used to propagate the source organism from which the sample was obtained.
-The EBI `cell line ontology <https://www.ebi.ac.uk/ols4/ontologies/clo>`_ may be used to find the name for the host cell line
+:lab_host: scientific name of the laboratory host used to propagate the source organism from which the sample was obtained. The EBI `cell line ontology <https://www.ebi.ac.uk/ols4/ontologies/clo>`_ may be used to find the name for the host cell line
 
 
 
@@ -198,48 +203,46 @@ the library description. This can be, for example, the name and/or URL to a spec
    submission - if required, `here <https://github.com/alakob/Metagen-FastQC-Docker>`_ is a tool which can be used.
 
 
-Submit Assemblies
-~~~~~~~~~~~~~~~~~
+Submit Assembled Sequences
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The instructions here provide specific details about submitting microbial pathogen assemblies. For assembly submission,
+
+The instructions here provide tips for submitting microbial pathogen assemblies. For genome assembly submission,
 Webin-CLI (command line interface) needs to be used. The guide for downloading and using Webin-CLI is `here <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html#webin-cli-submission>`_.
 
-.. note::
-   For submission of isolated pathogen sequences, please refer to the `targeted sequence submissions guide <https://ena-docs.readthedocs.io/en/latest/submit/sequence.html#how-to-submit-targeted-sequences>`_.
+.. tip::
+   For submission of targeted sequences, please refer to the `targeted sequence submissions guide <https://ena-docs.readthedocs.io/en/latest/submit/sequence.html#how-to-submit-targeted-sequences>`_.
 
-When you have prepared your assembly and it is ready for submission, you can test the submission using the Webin-CLI ``-validate`` flag.
-When you are ready to submit the assembly, you can use the ``-submit`` flag.
+For a pathogen assembly, in most cases, a **'clone or isolate'** assembly submission will be used. For other types of
+data, please review the `submission options <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#submission-options>`_.
 
-**Webin-CLI validate command:**
-
-.. code:: shell
-
-   java -jar webin-cli-6.4.0.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
-
-Assembly file
+Prepare files
 `````````````
 
-Fasta format is accepted for unannotated assemblies, and EMBL flat file format is accepted for annotated assemblies.
+Assembly file
+'''''''''''''
 
-The following resources may be helpful for file preparation:
-
+The accepted format for unannotated genome assembly is **fasta** and for annotated genome assembly, the accepted format is **embl flat file**
+Please refer to the `Accepted genome assembly data formats guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#accepted-genome-assembly-data-formats>`_
+for information about preparing these files.
 
 
 Manifest file
-`````````````
+'''''''''''''
 
-The manifest file associates the assembly to a study-sample pair. Please refer to
-the `assembly manifest file guide <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#manifest-files>`_
+The manifest file is essential for Webin-CLI assembly submission, and specifies metadata about the assembly, including the study and sample it is linked to.
+Please refer to the `assembly manifest file guide <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#manifest-files>`_
 for options.
 
-Please note the examples below are a guide and do not describe a mandatory manifest file format for organism classes.
+Please note the examples below are indicative and do not describe a mandatory manifest file format for organism classes.
 
-Examples of **manifest.txt**
+**manifest.txt** examples
 
 .. tabs::
 
    .. group-tab:: Viruses
 
+
       .. code:: none
 
          STUDY   TODO
@@ -249,12 +252,15 @@ Examples of **manifest.txt**
          COVERAGE   TODO
          PROGRAM   TODO
          PLATFORM   TODO
-         MINGAPLENGTH   TODO
+         MINGAPLENGTH   optional
          MOLECULETYPE   viral cRNA
+         DESCRIPTION optional
+         RUN_REF optional
          FASTA   genome.fasta.gz
 
    .. group-tab:: Bacteria
 
+
       .. code:: none
 
          STUDY   TODO
@@ -264,12 +270,15 @@ Examples of **manifest.txt**
          COVERAGE   TODO
          PROGRAM   TODO
          PLATFORM   TODO
-         MINGAPLENGTH   TODO
-         MOLECULETYPE   genomic DNA
-         FASTA   genome.fasta.gz
+         MINGAPLENGTH   optional
+         MOLECULETYPE   optional
+         DESCRIPTION optional
+         RUN_REF optional
+         FLATFILE   genome.embl.gz
 
    .. group-tab:: Eukaryota
 
+
       .. code:: none
 
          STUDY   TODO
@@ -279,24 +288,25 @@ Examples of **manifest.txt**
          COVERAGE   TODO
          PROGRAM   TODO
          PLATFORM   TODO
-         MINGAPLENGTH   TODO
+         MINGAPLENGTH   optional
          MOLECULETYPE   genomic DNA
+         DESCRIPTION optional
+         RUN_REF optional
          FASTA   genome.fasta.gz
          CHROMOSOME_LIST chromosome_list.txt
 
-chromosome list file
-````````````````````
+Chromosome list file
+''''''''''''''''''''
 
-The chromosome list file is an optional file for a complete pathogen assembly which describes the 'chromosomes' within
-the assembly.
-
-Chromosome here means a range of complete replicons, as explained `here <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_
+The chromosome list file is an optional file for a complete assembly which describes the 'chromosomes' within
+the assembly. Chromosome in the context of ENA submissions means a range of complete replicons, as explained `here <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_
 and is used when describing a completed assembly.
 
-The chromosome list file is a tab separated file with each row describing each chromosome. The chromosome list file
-guide is `here <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
+The chromosome list file is a tab separated file up to four columns. Each row describes each replicon unit within the assembly.
+Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
+for options.
 
-Examples of **chromosome_list.txt**
+**chromosome_list.txt** examples
 
 .. tabs::
 
@@ -308,34 +318,29 @@ Examples of **chromosome_list.txt**
 
       .. code:: none
 
-         chr01   1 Monopartite viroid
+         chr01   1 Linear-Monopartite viroid
 
       .. code:: none
 
-         chr01   1 Monopartite virion
-
-      .. code:: none
-
-         chr01   1 Monopartite phage
-
-      .. code:: none
-
-         chr01   1 Linear-Monopartite
-
-      .. code:: none
-
-         chr01   1 circular-Multipartite
-         chr02   2 circular-Multipartite
+         chr01   1 Multipartite
+         chr02   2 Multipartite
 
    .. group-tab:: Bacteria
 
+      By default prokaryotic chromosomes and plasmids will be assumed to reside in the in the cytoplasm, however, the 'plasmid'
+      chromosome_location may be specified.
+      By default the chromosome topology will be assumed to be linear, so in this example the circular topology was specified.
+
       .. code:: none
 
-         chr01   1 circulat-Chromosome
-         chr02   2 circular-Chromosome
-         chrMi   PLAS circular-Chromosome
+         chr01   1 circular-Chromosome
+         chr02   2 circular-Chromosome plasmid
+         chr03   3 circular-Chromosome plasmid
 
    .. group-tab:: Eukaryota
+
+      By default eukaryotic chromosomes will be assumed to reside in the nucleus. By default the chromosome topology
+      will be assumed to be linear, but it may also be specified.
 
       .. code:: none
 
@@ -346,3 +351,27 @@ Examples of **chromosome_list.txt**
          chrMi   MIT Linear-Chromosome Mitochondrion
 
 
+Webin-CLI submission
+````````````````````
+
+When you have prepared your assembly files and you are ready for submission, you can test the submission using the Webin-CLI ``-validate`` flag.
+When you are ready to submit the assembly, you can use the ``-submit`` flag.
+
+**Webin-CLI validate command:**
+
+::
+
+   java -jar webin-cli-6.4.0.jar -userName Webin-XXXX -password XXXX -context genome -manifest manifest.txt -validate
+
+
+Data Release and Citing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Once the data is submitted, it will take some time to be processed and archived. If your data is set to public, it will
+be made public and accessible from the Pathogens Portal.
+
+For information about data release, please find more information at the following pages:
+
+- Data Release Policies
+- Accession numbers
+- Citing and Orcid data claiming

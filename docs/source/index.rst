@@ -1,4 +1,4 @@
-Welcome to the ENA Pathogen Documentation
+Welcome to the ENA Pathogens Documentation
 ==========================================
 
 
@@ -7,7 +7,7 @@ Welcome to the ENA Pathogen Documentation
  :align: center
 
 
-Welcome to the ENA pathogen documentation, which provides details for how to use the Pathogen Portal.
+Welcome to the ENA pathogens documentation, which provides details for how to submit data and use the Pathogens Portal.
 
 
 
