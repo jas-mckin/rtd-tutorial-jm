@@ -19,7 +19,7 @@ Contents
 --------
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    
    pathogen_subs_guide
    

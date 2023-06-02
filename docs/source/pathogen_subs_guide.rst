@@ -178,8 +178,7 @@ Pathogen checklist host fields:
 :host tax_id: NCBI taxon id of the host, e.g. 9606
 :host health state: health status of the host at the time of sample collection
 :host scientific name: Scientific name of the natural (as opposed to laboratory) host to the organism from which sample was obtained.
-:lab_host: scientific name of the laboratory host used to propagate the source organism from which the sample was obtained.
-The EBI `cell line ontology <https://www.ebi.ac.uk/ols4/ontologies/clo>`_ may be used to find the name for the host cell line
+:lab_host: scientific name of the laboratory host used to propagate the source organism from which the sample was obtained. The EBI `cell line ontology <https://www.ebi.ac.uk/ols4/ontologies/clo>`_ may be used to find the name for the host cell line
 
 
 
@@ -287,14 +286,12 @@ Examples of **manifest.txt**
 chromosome list file
 ````````````````````
 
-The chromosome list file is an optional file for a complete pathogen assembly which describes the 'chromosomes' within
-the assembly.
-
-Chromosome here means a range of complete replicons, as explained `here <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_
+The chromosome list file is an optional file for a complete assembly which describes the 'chromosomes' within
+the assembly. Chromosome in the context of ENA submissions means a range of complete replicons, as explained `here <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_
 and is used when describing a completed assembly.
 
-The chromosome list file is a tab separated file with each row describing each chromosome. The chromosome list file
-guide is `here <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
+The chromosome list file is a tab separated file up to four columns. Each row describes each replicon unit within the assembly.
+The permitted values for the file are described `here <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_.
 
 Examples of **chromosome_list.txt**
 
@@ -329,13 +326,19 @@ Examples of **chromosome_list.txt**
 
    .. group-tab:: Bacteria
 
+      By default prokaryotic chromosomes and plasmids will be assumed to reside in the in the cytoplasm, however, the 'plasmid'
+      chromosome_location may be specified.
+      By default the chromosome topology will be assumed to be linear, so in this example the circular topology was specified.
+
       .. code:: none
 
-         chr01   1 circulat-Chromosome
+         chr01   1 circular-Chromosome
          chr02   2 circular-Chromosome
-         chrMi   PLAS circular-Chromosome
+         chrPl   PLAS circular-Chromosome plasmid
 
    .. group-tab:: Eukaryota
+
+      By default eukaryotic chromosomes will be assumed to reside in the nucleus
 
       .. code:: none
 
