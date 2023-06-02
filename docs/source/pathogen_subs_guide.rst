@@ -165,6 +165,9 @@ You can search for suitable taxon IDs and find more information about a taxon ID
    https://www.ebi.ac.uk/ena/taxonomy/rest/any-name/
    https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/
 
+The strain of a pathogen may be specified using the taxonomy, it may also be specified using the **strain** field
+in the checklists. If you specify the strain with both, this will make your strain easier to find.
+
 The `ENA taxonomy API <https://www.ebi.ac.uk/ena/taxonomy/rest/>`_ interface may also be used.
 
 
@@ -175,9 +178,9 @@ Every pathogen checklist includes host attribute fields which can be used to des
 The purpose of the host field is to describe the sample. If you have any questions or concerns about pathogen sample metadata, please
 contact the `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
-Pathogen checklist host fields:
+Pathogen checklist mandatory/reccommended host fields:
 
-:host tax_id: NCBI taxon id of the host, e.g. 9606
+:host taxid: NCBI taxon id of the host, e.g. 9606
 :host health state: health status of the host at the time of sample collection
 :host scientific name: Scientific name of the natural (as opposed to laboratory) host to the organism from which sample was obtained.
 :lab_host: scientific name of the laboratory host used to propagate the source organism from which the sample was obtained. The EBI `cell line ontology <https://www.ebi.ac.uk/ols4/ontologies/clo>`_ may be used to find the name for the host cell line
