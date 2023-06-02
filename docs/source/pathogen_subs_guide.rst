@@ -197,43 +197,40 @@ the library description. This can be, for example, the name and/or URL to a spec
    submission - if required, `here <https://github.com/alakob/Metagen-FastQC-Docker>`_ is a tool which can be used.
 
 
-Submit Assemblies
-~~~~~~~~~~~~~~~~~
+Submit assembled sequences
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The instructions here provide specific details about submitting microbial pathogen assemblies. For assembly submission,
+Introduction
+````````````
+
+The instructions here provide tips for submitting microbial pathogen assemblies. For genome assembly submission,
 Webin-CLI (command line interface) needs to be used. The guide for downloading and using Webin-CLI is `here <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html#webin-cli-submission>`_.
 
-.. note::
-   For submission of isolated pathogen sequences, please refer to the `targeted sequence submissions guide <https://ena-docs.readthedocs.io/en/latest/submit/sequence.html#how-to-submit-targeted-sequences>`_.
+.. tip::
+   For submission of targeted sequences, please refer to the `targeted sequence submissions guide <https://ena-docs.readthedocs.io/en/latest/submit/sequence.html#how-to-submit-targeted-sequences>`_.
 
-When you have prepared your assembly and it is ready for submission, you can test the submission using the Webin-CLI ``-validate`` flag.
-When you are ready to submit the assembly, you can use the ``-submit`` flag.
-
-**Webin-CLI validate command:**
-
-.. code:: shell
-
-   java -jar webin-cli-6.4.0.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+For a pathogen assembly, in most cases, a **'clone or isolate'** assembly submission will be used. Please refer to the main guide for
+`clone or isolate assembly submission <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html>`_. For other types of
+data, please review the `submission options <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#submission-options>`_.
 
 Assembly file
 `````````````
 
-Fasta format is accepted for unannotated assemblies, and EMBL flat file format is accepted for annotated assemblies.
-
-The following resources may be helpful for file preparation:
-
+The accepted format for unannotated genome assembly is **fasta** and for annotated genome assembly, the accepted format is **embl flat file**
+Please refer to the `Accepted genome assembly data formats guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#accepted-genome-assembly-data-formats>`_
+for information about preparing these files.
 
 
 Manifest file
-`````````````
+'''''''''''''
 
-The manifest file associates the assembly to a study-sample pair. Please refer to
-the `assembly manifest file guide <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#manifest-files>`_
+The manifest file is essential for Webin-CLI assembly submission, and specifies details about the assembly, including the study and sample it is linked to.
+Please refer to the `assembly manifest file guide <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#manifest-files>`_
 for options.
 
 Please note the examples below are indicative and do not describe a mandatory manifest file format for organism classes.
 
-Examples of **manifest.txt**
+**manifest.txt** examples
 
 .. tabs::
 
@@ -284,8 +281,8 @@ Examples of **manifest.txt**
          FASTA   genome.fasta.gz
          CHROMOSOME_LIST chromosome_list.txt
 
-chromosome list file
-````````````````````
+Chromosome list file
+''''''''''''''''''''
 
 The chromosome list file is an optional file for a complete assembly which describes the 'chromosomes' within
 the assembly. Chromosome in the context of ENA submissions means a range of complete replicons, as explained `here <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_
@@ -295,7 +292,7 @@ The chromosome list file is a tab separated file up to four columns. Each row de
 Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
 for options.
 
-Examples of **chromosome_list.txt**
+**chromosome_list.txt** examples
 
 .. tabs::
 
@@ -340,3 +337,14 @@ Examples of **chromosome_list.txt**
          chrMi   MIT Linear-Chromosome Mitochondrion
 
 
+Webin-CLI submission
+````````````````````
+
+When you have prepared your assembly files and you are ready for submission, you can test the submission using the Webin-CLI ``-validate`` flag.
+When you are ready to submit the assembly, you can use the ``-submit`` flag.
+
+**Webin-CLI validate command:**
+
+::
+
+   java -jar webin-cli-6.4.0.jar -userName Webin-XXXX -password XXXX -context genome -manifest manifest.txt -validate
