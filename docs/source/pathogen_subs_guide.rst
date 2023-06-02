@@ -231,7 +231,7 @@ The manifest file associates the assembly to a study-sample pair. Please refer t
 the `assembly manifest file guide <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#manifest-files>`_
 for options.
 
-Please note the examples below are a guide and do not describe a mandatory manifest file format for organism classes.
+Please note the examples below are indicative and do not describe a mandatory manifest file format for organism classes.
 
 Examples of **manifest.txt**
 
@@ -250,6 +250,7 @@ Examples of **manifest.txt**
          PLATFORM   TODO
          MINGAPLENGTH   TODO
          MOLECULETYPE   viral cRNA
+         RUN_REF TODO-optional
          FASTA   genome.fasta.gz
 
    .. group-tab:: Bacteria
@@ -265,7 +266,7 @@ Examples of **manifest.txt**
          PLATFORM   TODO
          MINGAPLENGTH   TODO
          MOLECULETYPE   genomic DNA
-         FASTA   genome.fasta.gz
+         FLATFILE   genome.embl.gz
 
    .. group-tab:: Eukaryota
 
@@ -291,7 +292,8 @@ the assembly. Chromosome in the context of ENA submissions means a range of comp
 and is used when describing a completed assembly.
 
 The chromosome list file is a tab separated file up to four columns. Each row describes each replicon unit within the assembly.
-The permitted values for the file are described `here <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_.
+Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
+for options.
 
 Examples of **chromosome_list.txt**
 
@@ -305,24 +307,12 @@ Examples of **chromosome_list.txt**
 
       .. code:: none
 
-         chr01   1 Monopartite viroid
+         chr01   1 Linear-Monopartite viroid
 
       .. code:: none
 
-         chr01   1 Monopartite virion
-
-      .. code:: none
-
-         chr01   1 Monopartite phage
-
-      .. code:: none
-
-         chr01   1 Linear-Monopartite
-
-      .. code:: none
-
-         chr01   1 circular-Multipartite
-         chr02   2 circular-Multipartite
+         chr01   1 Multipartite
+         chr02   2 Multipartite
 
    .. group-tab:: Bacteria
 
@@ -333,12 +323,13 @@ Examples of **chromosome_list.txt**
       .. code:: none
 
          chr01   1 circular-Chromosome
-         chr02   2 circular-Chromosome
-         chrPl   PLAS circular-Chromosome plasmid
+         chr02   2 circular-Chromosome plasmid
+         chr03   3 circular-Chromosome plasmid
 
    .. group-tab:: Eukaryota
 
-      By default eukaryotic chromosomes will be assumed to reside in the nucleus
+      By default eukaryotic chromosomes will be assumed to reside in the nucleus, also by default the chromosome topology
+      will be assumed to be linear, but it may also be specified.
 
       .. code:: none
 
