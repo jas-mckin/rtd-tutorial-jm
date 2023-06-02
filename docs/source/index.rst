@@ -7,7 +7,8 @@ Welcome to the ENA Pathogens Documentation
  :align: center
 
 
-Welcome to the ENA pathogens documentation, which provides details for how to submit data and use the Pathogens Portal.
+Welcome to the ENA pathogens documentation, which provides details for how to
+submit data and use the `Pathogens Portal <https://www.ebi.ac.uk/ena/pathogens/v2/>`_.
 
 
 
