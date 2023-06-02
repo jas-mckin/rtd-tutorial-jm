@@ -16,7 +16,7 @@ Introduction
 
 
 This guide provides general information and help for submitting pathogen sequence data to the `European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_
-. All public `INSDC <https://www.insdc.org/>`_ pathogen data will be made available to browse using the Pathogens Portal.
+. All public `INSDC <https://www.insdc.org/>`_ pathogen data will be made available to browse using the `Pathogens Portal <https://www.ebi.ac.uk/ena/pathogens/v2/>`_.
 
 Please see below for a specific guide for submitting pathogen related data. The guide frequently refers to the
 `ENA Training Modules <https://ena-docs.readthedocs.io/en/latest/index.html>`_,
@@ -242,6 +242,7 @@ Please note the examples below are indicative and do not describe a mandatory ma
 
    .. group-tab:: Viruses
 
+
       .. code:: none
 
          STUDY   TODO
@@ -259,6 +260,7 @@ Please note the examples below are indicative and do not describe a mandatory ma
 
    .. group-tab:: Bacteria
 
+
       .. code:: none
 
          STUDY   TODO
@@ -275,6 +277,7 @@ Please note the examples below are indicative and do not describe a mandatory ma
          FLATFILE   genome.embl.gz
 
    .. group-tab:: Eukaryota
+
 
       .. code:: none
 
@@ -336,7 +339,7 @@ for options.
 
    .. group-tab:: Eukaryota
 
-      By default eukaryotic chromosomes will be assumed to reside in the nucleus, also by default the chromosome topology
+      By default eukaryotic chromosomes will be assumed to reside in the nucleus. By default the chromosome topology
       will be assumed to be linear, but it may also be specified.
 
       .. code:: none
