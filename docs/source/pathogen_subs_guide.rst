@@ -6,6 +6,10 @@ General Pathogen Submissions Guide
  :align: center
 
 
+.. contents::
+   :local:
+   :depth: 4
+
 Introduction
 ~~~~~
 
@@ -29,11 +33,6 @@ us at ena-path-collabs@ebi.ac.uk.
   For small-scale SARS-CoV-2 viral data submissions, with no prior knowledge of ENA submission routes, we have developed a
   drag and drop submissions tool. Please complete the `form <https://www.covid19dataportal.org/submit-data/viral-sequence-form>`_
   if you would like to submit your data using this route.
-
-
-.. contents::
-   :local:
-   :depth: 3
 
 
 Getting Started
