@@ -170,25 +170,17 @@ The `ENA taxonomy API <https://www.ebi.ac.uk/ena/taxonomy/rest/>`_ interface may
 Sample host fields guidance
 ''''''''''''''''''
 
-Every pathogen checklist includes host fields. Here is provided some guidance on filling the host fields.
+Every pathogen checklist includes host attribute fields which can be used to describe the host. Here is provided some guidance on filling the host fields.
+The purpose of the host field is to describe the sample. If you have any questions or concerns about pathogen sample metadata, please
+contact the `helpdesk. <https://www.ebi.ac.uk/ena/browser/support>`_.
 
-
-:host: natural (as opposed to laboratory) host to the organism from which sample was obtained
-:host_body_site: name of body site from where the sample was obtained
-:host_genotype: genotype of host
-:host_gravidity: whether or not subject is gravid, including date due or date post-conception where applicable
-:host_growth_conditions: literature reference giving growth conditions of the host
-:host_phenotype: phenotype of host
-:host_sex: physical sex of the host
-:host_status: condition of host (eg. diseased or healthy)
-:host_tax_id: NCBI taxon id of the host
-:submitted_host_sex: physical sex of the host
-
-Host fields found when downloading checklists
+Pathogen checklist host fields:
 
 :host health state: health status of the host at the time of sample collection
 :host scientific name: the scientific name of the host
 :lab_host: scientific name of the laboratory host used to propagate the source organism from which the sample was obtained **lab_host is not in the API**
+
+
 
 Submit Run Data
 ~~~~~~

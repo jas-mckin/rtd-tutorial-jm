@@ -39,9 +39,9 @@ epub_show_urls = 'footnote'
 #}
 
 # -- Project information
-project = 'rtd-tutoiral-jm'
-copyright = '2021, Jasmine M'
-author = 'Jasmine M'
+project = 'ena-pathogen-docs'
+copyright = '2023, Licensed under the Apache License 2.0'
+author = 'European Nucleotide Archive (ENA).'
 
 # makes tabs possible
 extensions = ['sphinx_tabs.tabs']

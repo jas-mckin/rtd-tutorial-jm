@@ -1,36 +1,6 @@
-Usage
+Notes
 =====
 
-.. _installation:
-
-Installation
-------------
-
-To use Lumache, first install it using pip:
-
-.. code-block:: console
-
-   (.venv) $ pip install lumache
-
-Creating recipes
-----------------
-
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
 
 +--------------------------------------------------------------------------+--------------+
 | **Checklist**                                                            | **link**     |
@@ -60,3 +30,16 @@ Tweetorial
 
 
 
+
+api host fields:
+
+:host: natural (as opposed to laboratory) host to the organism from which sample was obtained
+:host_body_site: name of body site from where the sample was obtained
+:host_genotype: genotype of host
+:host_gravidity: whether or not subject is gravid, including date due or date post-conception where applicable
+:host_growth_conditions: literature reference giving growth conditions of the host
+:host_phenotype: phenotype of host
+:host_sex: physical sex of the host
+:host_status: condition of host (eg. diseased or healthy)
+:host_tax_id: NCBI taxon id of the host
+:submitted_host_sex: physical sex of the host
