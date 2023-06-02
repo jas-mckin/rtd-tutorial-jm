@@ -1,5 +1,5 @@
 General Pathogen Submissions Guide
-===================
+==================================
 
 .. image:: images/pathogens_logo_1.png
  :width: 400
@@ -11,7 +11,7 @@ General Pathogen Submissions Guide
    :depth: 4
 
 Introduction
-~~~~~
+~~~~~~~~~~~~
 
 
 This guide provides general information and help for submitting pathogen sequence data to the `European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_
@@ -36,9 +36,9 @@ us at ena-path-collabs@ebi.ac.uk.
 
 
 Getting Started
-~~~~~~~
+~~~~~~~~~~~~~~~
 Register a submission account
-``````````````
+`````````````````````````````
 Before you can submit data to the ENA you must `register a Webin submission account <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/registration.html>`_.
 
 Please navigate to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and click the ‘Register’
@@ -46,7 +46,7 @@ button and complete the registration form.
 
 
 The ENA Metadata Model
-``````````````
+``````````````````````
 Before submitting data to ENA, it is important to familiarise yourself with the `ENA metadata model <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html#the-ena-metadata-model>`_
 and what parts of your research project can be represented by which metadata objects. This will determine what you need to submit.
 
@@ -61,7 +61,7 @@ and what parts of your research project can be represented by which metadata obj
 
 
 ENA Submission routes
-``````````````
+`````````````````````
 ENA allows submissions via three routes, each of which is appropriate for a
 different set of submission types. You may be required to use more than one in
 the process of submitting your data:
@@ -97,7 +97,7 @@ The table below outlines what can be submitted through each submission route.
 +------------------------+-------------+-----------+--------------+
 
 Register Metadata
-~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Register Study
 ``````````````
@@ -110,7 +110,7 @@ Your  studies can now be claimed using your ORCID ID and/or assigned a DOI. Plea
 and `here <https://ena-browser-docs.readthedocs.io/en/latest/help_and_guides/sars-cov-2-submissions.html#doi-issuing>`_ for more information on these options.
 
 Register Samples
-``````````````
+````````````````
 
 Having registered a study, please proceed to register your samples. These are metadata objects that describe the source
 biological material of your experiments. Following this, the sequence data can be registered (as described in later sections).
@@ -149,8 +149,8 @@ The pathogen specific checklists are provided below.
 | `ERC000041 <https://www.ebi.ac.uk/ena/browser/view/ERC000041>`_ | ENA Global Microbial Identifier Proficiency Test (GMI PT) checklist       |
 +-----------------------------------------------------------------+---------------------------------------------------------------------------+
 
-Sample Taxonomy
-'''''''''''''''''
+Sample taxonomy
+'''''''''''''''
 
 Our `Tips for Sample Taxonomy <https://ena-docs.readthedocs.io/en/latest/faq/taxonomy.html>`_ page provides a helpful guide for choosing
 the right taxonomy for your pathogen submission.
@@ -166,8 +166,8 @@ You can search for suitable taxon IDs and find more information about a taxon ID
 
 The `ENA taxonomy API <https://www.ebi.ac.uk/ena/taxonomy/rest/>`_ interface may also be used.
 
-Sample host fields guidance
-''''''''''''''''''
+Sample host
+'''''''''''
 
 Every pathogen checklist includes host attribute fields which can be used to describe the host. Here is provided some guidance on filling the host fields.
 The purpose of the host field is to describe the sample. If you have any questions or concerns about pathogen sample metadata, please
@@ -175,31 +175,57 @@ contact the `helpdesk. <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 Pathogen checklist host fields:
 
+:host tax_id: NCBI taxon id of the host, e.g. 9606
 :host health state: health status of the host at the time of sample collection
-:host scientific name: the scientific name of the host
-:lab_host: scientific name of the laboratory host used to propagate the source organism from which the sample was obtained **lab_host is not in the API**
+:host scientific name: Scientific name of the natural (as opposed to laboratory) host to the organism from which sample was obtained.
+:lab_host: scientific name of the laboratory host used to propagate the source organism from which the sample was obtained.
+The EBI `cell line ontology <https://www.ebi.ac.uk/ols4/ontologies/clo>`_ may be used to find the name for the host cell line
 
 
 
-Submit Run Data
-~~~~~~
+Submit Runs
+~~~~~~~~~~~
 
-Register Study
-``````````````
+After registering your study and samples, you can submit your read files along with experimental (library-related) metadata.
+See our `Read Submission Guide <https://ena-docs.readthedocs.io/en/latest/submit/reads.html>`_ for detailed instructions on submitting reads.
 
-Sample host field
-''''''''''''''''''
+We encourage submissions to include information on specific protocols used for the experiment. This should be provided in
+the library description. This can be, for example, the name and/or URL to a specific protocol. View our listing of the available
+`full experimental metadata dictionaries <https://ena-docs.readthedocs.io/en/latest/submit/reads/webin-cli.html>`_.
 
-Submit Assembly data
-~~~~~~
+.. note::
+   Submitted reads to ENA should not contain human identifiable reads. Please filter out human reads prior to
+   submission - if required, `here<https://github.com/alakob/Metagen-FastQC-Docker>`_ is a tool which can be used.
 
-Webin-CLI command
+
+Submit Assemblies
+~~~~~~~~~~~~~~~~~
+
+The instructions here provide specific details about submitting microbial pathogen assemblies. For assembly submission,
+Webin-CLI (command line interface) needs to be used. The guide for downloading and using Webin-CLI is `here <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html#webin-cli-submission>`_.
+
+.. note::
+   For submission of isolated pathogen sequences, please refer to the `targeted sequence submissions guide <https://ena-docs.readthedocs.io/en/latest/submit/sequence.html#how-to-submit-targeted-sequences> `_.
+
+When you have prepared your assembly and it is ready for submission, you can test the submission using the Webin-CLI ``-validate`` flag.
+When you are ready to submit the assembly, you can use the ``-submit`` flag.
+
+**Webin-CLI validate command:**
 
 .. code:: shell
 
-   java -jar webin-cli-<version>.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
+   java -jar webin-cli-6.4.0.jar -userName Webin-xxxx -password XXXX -context genome -manifest manifest.txt -validate
 
-manifest file examples
+Manifest file
+`````````````
+
+The manifest file associates the assembly to a study-sample pair. Please refer to
+the `assembly manifest file guide <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#manifest-files>`_
+for options.
+
+Please note the examples below are a guide and do not describe a mandatory manifest file format for organism classes.
+
+Examples of **manifest.txt**
 
 .. tabs::
 
@@ -247,8 +273,18 @@ manifest file examples
          MINGAPLENGTH   TODO
          MOLECULETYPE   genomic DNA
          FASTA   genome.fasta.gz
+         CHROMOSOME_LIST chromosome_list.txt
 
-chromosome list file examples
+chromosome list file
+````````````````````
+
+The chromosome list file is an optional file for a complete pathogen assembly which describes the 'chromosomes' within
+the assembly.
+
+Chromosome here means a range of complete replicons, as explained `here <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_
+and is used when describing a completed assembly.
+
+Examples of **chromosome_list.txt**
 
 .. tabs::
 
@@ -284,25 +320,10 @@ chromosome list file examples
       .. code:: none
 
          chr01   1 Monopartite
-
-      .. code:: none
-
          chr01   1 Monopartite viroid (viral cRNA)
-
-      .. code:: none
-
          chr01   1 Monopartite virion
-
-      .. code:: none
-
          chr01   1 Monopartite phage
-
-      .. code:: none
-
          chr01   1 Linear-Monopartite
-
-      .. code:: none
-
          chr01   1 circular-Multipartite
          chr02   2 circular-Multipartite
 
@@ -311,15 +332,10 @@ chromosome list file examples
       .. code:: none
 
          chr01   1 Monopartite
-
          chr01   1 Monopartite viroid (viral cRNA)
-
          chr01   1 Monopartite virion
-
          chr01   1 Monopartite phage
-
          chr01   1 Linear-Monopartite
-
          chr01   1 circular-Multipartite
 
 
