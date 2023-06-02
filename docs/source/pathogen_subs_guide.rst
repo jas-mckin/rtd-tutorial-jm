@@ -128,7 +128,8 @@ Sample checklists
 The following Sample checklists contain  **mandatory**, *recommended* and optional metadata fields (``<SAMPLE_ATTRIBUTE>``),
 with a description for each field, to help with sample metadata completion.
 The checklists were agreed by the Genomic Standards Consortium (GSC). In addition to the core checklist for each life domain,
-the GSC also provides checklist extensions which may have the metadata field you are looking for.
+the GSC also provides checklist `extensions <https://www.gensc.org/pages/standards/extensions.html>`_ which may have the
+metadata field you are looking for.
 
 You can use the `Sample checklists portal <https://www.ebi.ac.uk/ena/browser/checklists>`_ to browse all ENA checklists.
 The pathogen specific checklists are provided below.
@@ -166,12 +167,13 @@ You can search for suitable taxon IDs and find more information about a taxon ID
 
 The `ENA taxonomy API <https://www.ebi.ac.uk/ena/taxonomy/rest/>`_ interface may also be used.
 
+
 Sample host
 '''''''''''
 
 Every pathogen checklist includes host attribute fields which can be used to describe the host. Here is provided some guidance on filling the host fields.
 The purpose of the host field is to describe the sample. If you have any questions or concerns about pathogen sample metadata, please
-contact the `helpdesk. <https://www.ebi.ac.uk/ena/browser/support>`_.
+contact the `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 Pathogen checklist host fields:
 
@@ -197,7 +199,7 @@ the library description. This can be, for example, the name and/or URL to a spec
    submission - if required, `here <https://github.com/alakob/Metagen-FastQC-Docker>`_ is a tool which can be used.
 
 
-Submit assembled sequences
+Submit Assembled Sequences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Introduction
@@ -209,12 +211,11 @@ Webin-CLI (command line interface) needs to be used. The guide for downloading a
 .. tip::
    For submission of targeted sequences, please refer to the `targeted sequence submissions guide <https://ena-docs.readthedocs.io/en/latest/submit/sequence.html#how-to-submit-targeted-sequences>`_.
 
-For a pathogen assembly, in most cases, a **'clone or isolate'** assembly submission will be used. Please refer to the main guide for
-`clone or isolate assembly submission <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html>`_. For other types of
+For a pathogen assembly, in most cases, a **'clone or isolate'** assembly submission will be used. For other types of
 data, please review the `submission options <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#submission-options>`_.
 
 Assembly file
-`````````````
+'''''''''''''
 
 The accepted format for unannotated genome assembly is **fasta** and for annotated genome assembly, the accepted format is **embl flat file**
 Please refer to the `Accepted genome assembly data formats guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#accepted-genome-assembly-data-formats>`_
