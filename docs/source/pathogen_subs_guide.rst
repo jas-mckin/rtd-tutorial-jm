@@ -225,7 +225,7 @@ for information about preparing these files.
 Manifest file
 '''''''''''''
 
-The manifest file is essential for Webin-CLI assembly submission, and specifies details about the assembly, including the study and sample it is linked to.
+The manifest file is essential for Webin-CLI assembly submission, and specifies metadata about the assembly, including the study and sample it is linked to.
 Please refer to the `assembly manifest file guide <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#manifest-files>`_
 for options.
 
@@ -246,9 +246,10 @@ Please note the examples below are indicative and do not describe a mandatory ma
          COVERAGE   TODO
          PROGRAM   TODO
          PLATFORM   TODO
-         MINGAPLENGTH   TODO
+         MINGAPLENGTH   optional
          MOLECULETYPE   viral cRNA
-         RUN_REF TODO-optional
+         DESCRIPTION optional
+         RUN_REF optional
          FASTA   genome.fasta.gz
 
    .. group-tab:: Bacteria
@@ -262,8 +263,10 @@ Please note the examples below are indicative and do not describe a mandatory ma
          COVERAGE   TODO
          PROGRAM   TODO
          PLATFORM   TODO
-         MINGAPLENGTH   TODO
-         MOLECULETYPE   genomic DNA
+         MINGAPLENGTH   optional
+         MOLECULETYPE   optional
+         DESCRIPTION optional
+         RUN_REF optional
          FLATFILE   genome.embl.gz
 
    .. group-tab:: Eukaryota
@@ -277,8 +280,10 @@ Please note the examples below are indicative and do not describe a mandatory ma
          COVERAGE   TODO
          PROGRAM   TODO
          PLATFORM   TODO
-         MINGAPLENGTH   TODO
+         MINGAPLENGTH   optional
          MOLECULETYPE   genomic DNA
+         DESCRIPTION optional
+         RUN_REF optional
          FASTA   genome.fasta.gz
          CHROMOSOME_LIST chromosome_list.txt
 
@@ -349,3 +354,16 @@ When you are ready to submit the assembly, you can use the ``-submit`` flag.
 ::
 
    java -jar webin-cli-6.4.0.jar -userName Webin-XXXX -password XXXX -context genome -manifest manifest.txt -validate
+
+
+Data Release and Citing
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Once the data is submitted, it will take some time to be processed and archived. If your data is set to public, it will
+be made public and accessible from the Pathogens Portal.
+
+For information about data release, please find more information at the following pages:
+
+- Data Release Policies
+- Accession numbers
+- Citing and Orcid data claiming
