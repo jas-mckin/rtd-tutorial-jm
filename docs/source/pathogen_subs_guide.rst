@@ -205,8 +205,6 @@ the library description. This can be, for example, the name and/or URL to a spec
 Submit Assembled Sequences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Introduction
-````````````
 
 The instructions here provide tips for submitting microbial pathogen assemblies. For genome assembly submission,
 Webin-CLI (command line interface) needs to be used. The guide for downloading and using Webin-CLI is `here <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html#webin-cli-submission>`_.
@@ -216,6 +214,9 @@ Webin-CLI (command line interface) needs to be used. The guide for downloading a
 
 For a pathogen assembly, in most cases, a **'clone or isolate'** assembly submission will be used. For other types of
 data, please review the `submission options <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#submission-options>`_.
+
+Prepare files
+`````````````
 
 Assembly file
 '''''''''''''
