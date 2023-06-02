@@ -1,9 +1,10 @@
-General Pathogen Submissions Guide
+General Pathogens Submissions Guide
 ==================================
 
 .. image:: images/pathogens_logo_1.png
  :width: 400
  :align: center
+
 
 
 .. contents::
