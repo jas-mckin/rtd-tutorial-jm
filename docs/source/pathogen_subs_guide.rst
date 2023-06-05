@@ -230,11 +230,13 @@ for information about preparing these files.
 Manifest file
 '''''''''''''
 
-The manifest file is essential for Webin-CLI assembly submission, and specifies metadata about the assembly, including the study and sample it is linked to.
+The manifest file is a tab-separated .txt file for Webin-CLI assembly submission. It specifies metadata about the
+assembly, including the study and sample it is linked to.
 Please refer to the `assembly manifest file guide <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#manifest-files>`_
-for options.
+for permitted values.
 
-Please note the examples below are indicative and do not describe a mandatory manifest file format for organism classes.
+.. warning::
+   Please note the examples below are indicative and do not describe any mandatory file format.
 
 **manifest.txt** examples
 
@@ -304,7 +306,7 @@ and is used when describing a completed assembly.
 
 The chromosome list file is a tab separated file up to four columns. Each row describes each replicon unit within the assembly.
 Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
-for options.
+for permitted values.
 
 **chromosome_list.txt** examples
 
@@ -372,6 +374,7 @@ be made public and accessible from the Pathogens Portal.
 
 For information about data release, please find more information at the following pages:
 
-- Data Release Policies
-- Accession numbers
-- Citing and Orcid data claiming
+- `Data Release Policies <https://ena-docs.readthedocs.io/en/latest/faq/release.html>`_
+- `Accession numbers <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/accessions.html>`_
+- `Citing and Orcid data claiming <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/accessions.html#how-to-cite-your-ena-study>`_
+
