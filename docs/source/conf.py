@@ -39,7 +39,7 @@ epub_show_urls = 'footnote'
 #}
 
 # -- Project information
-project = 'ena-pathogen-docs'
+project = 'jm-test-docs'
 copyright = '2023, European Nucleotide Archive (ENA), Licensed under the Apache License 2.0'
 author = 'European Nucleotide Archive (ENA)'
 
