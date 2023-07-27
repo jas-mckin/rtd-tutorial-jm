@@ -176,10 +176,10 @@ Sample host
 '''''''''''
 
 Every pathogen checklist includes host attribute fields which can be used to describe the host. Here is provided some guidance on filling the host fields.
-The purpose of the host field is to describe the sample. If you have any questions or concerns about pathogen sample metadata, please
+If you have any questions or concerns about pathogen sample metadata, please
 contact the `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
-Pathogen checklist mandatory/reccommended host fields:
+Pathogen checklists host fields:
 
 :host taxid: NCBI taxon id of the host, e.g. 9606
 :host health state: health status of the host at the time of sample collection
