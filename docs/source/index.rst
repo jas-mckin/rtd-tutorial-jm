@@ -26,6 +26,12 @@ Contents
    mermaid/mermaid
    pathogen_analysis
    notes
+
+
+.. toctree::
+   :maxdepth: 2
+   
+   mermaid/mermaid
    
 
    
