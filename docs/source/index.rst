@@ -23,6 +23,7 @@ Contents
    :maxdepth: 2
    
    pathogen_subs_guide
+   mermaid
    
 
    
