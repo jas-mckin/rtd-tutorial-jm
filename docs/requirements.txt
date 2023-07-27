@@ -1,1 +1,1 @@
-sphinx-tabs
+docutils<0.17
