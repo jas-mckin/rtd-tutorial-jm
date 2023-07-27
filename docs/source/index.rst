@@ -23,6 +23,15 @@ Contents
    :maxdepth: 2
    
    pathogen_subs_guide
+   mermaid/mermaid
+   pathogen_analysis
+   notes
+
+
+.. toctree::
+   :maxdepth: 2
+   
+   mermaid/mermaid
    
 
    
