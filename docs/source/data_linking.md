@@ -32,3 +32,11 @@ test mermaid diagram:
 .. mermaid:: path/to/mermaid-gantt-code.mmd
 
 
+```mermaid
+graph LR
+    hello --> world
+    world --> again
+    again --> hello
+```
+
+

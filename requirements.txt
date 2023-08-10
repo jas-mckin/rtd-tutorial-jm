@@ -1,0 +1,5 @@
+docutils<0.17
+sphinx-tabs
+myst_parser
+sphinxcontrib-mermaid
+mkdocs-mermaid2-plugin
