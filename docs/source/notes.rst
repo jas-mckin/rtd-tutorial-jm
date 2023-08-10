@@ -43,3 +43,18 @@ api host fields:
 :host_status: condition of host (eg. diseased or healthy)
 :host_tax_id: NCBI taxon id of the host
 :submitted_host_sex: physical sex of the host
+
+
+test mermaid diagram:
+
+.. mermaid::
+
+   flowchart TD
+      A[Christmas] -->|Get money| B(Go shopping)
+      B --> C{Let me think}
+      C -->|One| D[Laptop]
+      C -->|Two| E[iPhone]
+      C -->|Three| F[fa:fa-car Car]
+
+
+.. mermaid:: path/to/mermaid-gantt-code.mmd
