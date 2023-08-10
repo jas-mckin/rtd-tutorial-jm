@@ -44,5 +44,5 @@ copyright = '2023, European Nucleotide Archive (ENA), Licensed under the Apache 
 author = 'European Nucleotide Archive (ENA)'
 
 # makes tabs possible
-extensions = ['sphinx_tabs.tabs']
+extensions = ['sphinx_tabs.tabs','sphinxcontrib-mermaid']
 sphinx_tabs_valid_builders = ['linkcheck']
