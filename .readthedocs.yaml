@@ -1,3 +1,8 @@
+# .readthedocs.yaml
+# Read the Docs configuration file
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+# Required
 version: 2
 
 formats: all
@@ -12,5 +17,16 @@ python:
 #    - method: pip
 #      path: another/package
   system_packages: true
+
+
+# Set the version of Python and other tools you might need
+build:
+    os: ubuntu-20.04
+    tools:
+      python: "3.8"
+      nodejs: "16"
+    jobs:
+      post_install:
+        - npm install -g @mermaid-js/mermaid-cli
 
 
